@@ -8,7 +8,10 @@ import {
 } from './type-helpers.utils';
 import { RemoveFieldsWithType } from './types/remove-fields-with-type.type';
 
-export function PartialType<T>(classRef: Type<T>) {
+/**
+ * @publicApi
+ */
+export function PartialType<T>(classRef: Type<T>){
   abstract class PartialClassType {
     constructor() {
       inheritPropertyInitializers(this, classRef);
